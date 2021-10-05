@@ -23,8 +23,8 @@ nav{
   width: 250px;
   height: calc(100vh - 100px);
   background-color: black;
-  color: white;
-  padding: 10px;
+  color: #747474;
+  padding: 15px;
 }
 
 main{
@@ -49,13 +49,23 @@ ul li{
 }
 
 ul li a{
-  color: white;
+  color: #747474;
   text-decoration: none;
 }
 
-h2{
+.title-area{
   font-size: 28px;
   font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.title-area.second{
+  margin-bottom: 10px;
+}
+
+.under-title{
+  color: #7c7d82;
+  padding-bottom: 30px;
 }
 /* //GLOBAL */
 
@@ -70,17 +80,93 @@ h2{
 }
 
 .nav-list ul li, .playlist-list ul li{
-  padding: 10px 0;
+  padding: 7px 0;
+}
+
+.playlist-list h3{
+  padding-bottom: 10px;
+  color: white;
 }
 
 .bottom-nav p{
   padding: 5px 0;
-  border-bottom: 1px solid lightgrey;
+
 }
 
 .user{
   padding: 10px 0;
 }
+
+.logo-user{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #808080;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.center-logo-user{
+  width: 100%;
+}
+
+.user span{
+  color: white;
+}
+
+.icon-nav{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+}
+
+svg{
+  width: 100%;
+  color: #747474;
+}
+
+.active{
+  color: white;
+}
+
+.icon-nav.new{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #a3a3a3;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.center-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.new i{
+  font-size: 30px;
+  color: black;
+}
+
+.playlist{
+  padding-top: 15px;
+}
+
+.install-app{
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.install-app i{
+  padding-right: 5px;
+}
+
 /* //NAV */
 
 /* MAIN */
@@ -93,6 +179,10 @@ h2{
   margin-left: -20px;
 }
 
+.main-list{
+  padding-bottom: 30px;
+}
+
 .main-list ul{
   display: flex;
   justify-content: center;
@@ -103,14 +193,11 @@ h2{
   padding: 5px 15px;
 }
 
-main h2{
-  padding-bottom: 30px;
-}
-
 .row{
   display: flex;
   /* justify-content: space-between; */
   flex-wrap: wrap;
+  padding-bottom: 40px;
 }
 
 .box{
@@ -136,9 +223,21 @@ main h2{
   padding-bottom: 10px;
 }
 
+.box-text p{
+  color: #7c7d82;
+}
+
+.round-img{
+  border-radius: 50%;
+}
+
+
 /* //MAIN */
 
+/* SONG BAR */
 .song-bar{
   position: relative;
   z-index: 2;
 }
+/* //SONG BAR */
+
