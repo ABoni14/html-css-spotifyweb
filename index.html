@@ -14,6 +14,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Spotify Web</title>
 </head>
@@ -94,7 +100,13 @@
 
     <!-- MAIN CONTENT -->
     <main>
-      <div class="top-overlay"></div>
+      <div class="top-overlay clearfix">
+        <div class="button-container">
+          <a class="button-upgrade" href="#">
+            EFFETTUA L'UPGRADE
+          </a>
+        </div>
+      </div>
       <div class="main-list">
         <ul>
           <li><a href="#">IN EVIDENZA</a></li>
@@ -234,7 +246,9 @@
       <div class="time-song">
         <span>0:25</span>
         <div class="time">
-          <div class="time-active"></div>
+          <div class="time-active">
+            <div class="round-bar"></div>
+          </div>
         </div>
         <span>4:35</span>
       </div>
@@ -247,7 +261,9 @@
         <i class="fas fa-volume-up"></i>
       </div>
       <div class="song-volume">
-        <div class="volume-active"></div>
+        <div class="volume-active">
+          <div class="round-bar"></div>
+        </div>
       </div>
     </div>
     
