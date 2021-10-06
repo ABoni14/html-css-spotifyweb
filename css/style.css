@@ -98,6 +98,7 @@ ul li a{
   color: white;
 }
 
+
 .bottom-nav p{
   padding: 5px 0;
 
@@ -246,6 +247,11 @@ svg{
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 40px;
+}
+
+.row.first{
+  justify-content: space-between;
+
 }
 
 .box{
@@ -406,7 +412,6 @@ svg{
   }
 
   .main-list ul li{
-    font-size: 17px;
     padding: 5px 32px;
   }
 
@@ -416,7 +421,8 @@ svg{
   
   .box{
     width: 15vw;
-    margin-right: 13px;
+    margin-right: 9px;
+    margin-bottom: 5px;
   }
   
   .box-img{
@@ -436,10 +442,10 @@ svg{
 @media screen and (max-width: 767px){
   .main-list ul{
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .main-list ul li{
-    font-size: 17px;
     padding: 5px 32px;
   }
 
@@ -450,6 +456,7 @@ svg{
   .box{
     width: 15vw;
     margin-right: 13px;
+    margin-bottom: 5px;
   }
   
   .box-img{
