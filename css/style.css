@@ -222,10 +222,6 @@ svg{
   background-color: white;
 } 
 
-/* .nav-main-active{
-  color: white;
-} */
-
 .song-description p:hover{
   text-decoration: underline;
 }
@@ -241,13 +237,13 @@ svg{
 }
 
 .main-list ul li{
+  font-size: 15px;
   padding: 5px 15px;
   font-weight: 800;
 }
 
 .row{
   display: flex;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
   padding-bottom: 40px;
 }
@@ -401,4 +397,73 @@ svg{
   width: 34vw;
 }
 /* //SONG BAR */
+
+/* MEDIA QUERY */
+/* MEDIUM VERSION 1199px - 768px */
+@media screen and (max-width: 1199px){
+  .main-list ul{
+    flex-wrap: wrap;
+  }
+
+  .main-list ul li{
+    font-size: 17px;
+    padding: 5px 32px;
+  }
+
+  .row{
+    padding-bottom: 40px;
+  }
+  
+  .box{
+    width: 15vw;
+    margin-right: 13px;
+  }
+  
+  .box-img{
+    width: 15vw;
+    height: 15vw;
+    margin-bottom: 10px;
+  }
+  
+  .box-img img{
+    width: 100%;
+  }
+}
+/* //MEDIUM VERSION 1199px - 768px */
+
+
+/* SMALL VERSION 767px - 576px */
+@media screen and (max-width: 767px){
+  .main-list ul{
+    flex-wrap: wrap;
+  }
+
+  .main-list ul li{
+    font-size: 17px;
+    padding: 5px 32px;
+  }
+
+  .row{
+    padding-bottom: 40px;
+  }
+  
+  .box{
+    width: 15vw;
+    margin-right: 13px;
+  }
+  
+  .box-img{
+    width: 15vw;
+    height: 15vw;
+    margin-bottom: 10px;
+  }
+  
+  .box-img img{
+    width: 100%;
+  }
+}
+/* //SMALL VERSION 767px - 576px */
+
+/* //MEDIA QUERY */
+
 
