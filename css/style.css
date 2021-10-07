@@ -28,6 +28,7 @@ nav{
   color: #747474;
   padding: 15px;
   font-weight: 600;
+  overflow: hidden;
 }
 
 .top-nav{
