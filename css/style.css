@@ -16,9 +16,6 @@ body{
 }
 
 nav{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   float: left;
   width: 250px;
   height: calc(100vh - 90px);
@@ -55,7 +52,7 @@ ul li a{
 }
 
 .title-area{
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -72,9 +69,20 @@ ul li a{
 /* //GLOBAL */
 
 /* NAV */
+.top-nav{
+  width: 100%;
+  height: calc(100% - 90px);
+}
+
+.bottom-nav{
+  width: 100%;
+  height: 90px;
+  display: block;
+}
+
 #logo{
   width: 160px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .nav-list{
@@ -85,12 +93,9 @@ ul li a{
   padding: 7px 0;
 }
 
-.playlist ul{
-  overflow: auto;
-}
-
 .playlist ul li{
   padding: 10px 0;
+  font-size: 14px;
 }
 
 .playlist-list h3{
@@ -98,10 +103,8 @@ ul li a{
   color: white;
 }
 
-
 .bottom-nav p{
   padding: 5px 0;
-
 }
 
 .user{
@@ -127,11 +130,19 @@ ul li a{
   color: white;
 }
 
-.icon-nav{
+.icon-nav, #logo-small{
   display: inline-block;
   height: 30px;
   width: 30px;
   vertical-align: middle;
+}
+
+#logo-small{
+  display: none;
+}
+
+#logo-small img{
+  width: 100%;
 }
 
 svg{
@@ -167,6 +178,8 @@ svg{
 
 .playlist{
   padding-top: 15px;
+  overflow: auto;
+  min-height: 400px;
 }
 
 .install-app{
@@ -176,6 +189,17 @@ svg{
 
 .install-app i{
   padding-right: 5px;
+}
+
+.icon-nav.green{
+  width: 2px;
+  height: 30px;
+  background-color: #bcff30;
+  margin-left: -15px;
+}
+
+.icon-nav.home{
+  margin-left: 8px;
 }
 /* //NAV */
 
@@ -223,18 +247,11 @@ svg{
   background-color: white;
 } 
 
-.song-description p:hover{
-  text-decoration: underline;
-}
-
-.time-active:hover, .volume-active:hover{
-  background-color: #bcff30;
-}
-
 .main-list ul{
   display: flex;
   justify-content: center;
   margin-top: 120px;
+  flex-wrap: wrap;
 }
 
 .main-list ul li{
@@ -250,19 +267,19 @@ svg{
 }
 
 .row.first{
-  justify-content: space-between;
+  justify-content: flex-start;
 
 }
 
 .box{
-  width: 12vw;
+  width: 15%;
   margin-right: 10px;
 }
 
 .box-img{
-  width: 12vw;
-  height: 12vw;
+  width: 100%;
   margin-bottom: 15px;
+  position: relative;
 }
 
 .box-img img{
@@ -275,21 +292,63 @@ svg{
 
 .box-text h3{
   padding-bottom: 10px;
+  font-size: 14px;
 }
 
 .box-text p{
   color: #7c7d82;
+  font-size: 12px;
 }
 
 .round-img{
   border-radius: 50%;
+}
+
+.overley-box{
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 98;
+}
+
+.box-img:hover .overley-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overley-box.round-overley{
+  border-radius: 50%;
+}
+
+.overley-box i{
+  font-size: 55px;
+}
+
+.main-list ul li:first-child{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.green-bar{
+  width: 37px;
+  height: 2px;
+  background-color: #bcff30;
+  border-radius: 10px;
+  margin-top: 3px;
 }
 /* //MAIN */
 
 /* SONG BAR */
 .song-bar{
   position: relative;
-  z-index: 2;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -325,6 +384,7 @@ svg{
 .icon-left-sb i, .icon-right-sb i{
   color: #7c7d82;
   padding-right: 10px;
+  font-size: 13px;
 }
 
 .icon-right-sb i{
@@ -332,7 +392,7 @@ svg{
 }
 
 .song-volume, .volume-active{
-  width: 120px;
+  width: 90px;
   height: 4px;
   background-color: #7c7d82;
   border-radius: 5px;
@@ -387,7 +447,7 @@ svg{
 .button-center-sb{
   display: flex;
   align-items: center;
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 5px;
 }
 
@@ -396,81 +456,139 @@ svg{
 }
 
 .fa-play-circle{
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .time-song{
   width: 34vw;
+}
+
+.song-description p:hover{
+  text-decoration: underline;
+}
+
+.time-active:hover, .volume-active:hover{
+  background-color: #bcff30;
 }
 /* //SONG BAR */
 
 /* MEDIA QUERY */
 /* MEDIUM VERSION 1199px - 768px */
 @media screen and (max-width: 1199px){
-  .main-list ul{
-    flex-wrap: wrap;
-  }
-
   .main-list ul li{
     padding: 5px 32px;
   }
 
   .row{
-    padding-bottom: 40px;
+    padding-bottom: 15px;
   }
   
   .box{
-    width: 15vw;
+    width: 23%;
     margin-right: 9px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
   
   .box-img{
-    width: 15vw;
-    height: 15vw;
     margin-bottom: 10px;
-  }
-  
-  .box-img img{
-    width: 100%;
   }
 }
 /* //MEDIUM VERSION 1199px - 768px */
 
-
 /* SMALL VERSION 767px - 576px */
 @media screen and (max-width: 767px){
-  .main-list ul{
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
   .main-list ul li{
     padding: 5px 32px;
   }
 
   .row{
-    padding-bottom: 40px;
+    padding-bottom: 15px;
   }
   
   .box{
-    width: 15vw;
+    width: 45%;
     margin-right: 13px;
     margin-bottom: 5px;
   }
-  
-  .box-img{
-    width: 15vw;
-    height: 15vw;
-    margin-bottom: 10px;
+
+  .icon-left-sb, .icon-right-sb{
+    display: flex;
+    flex-direction: column;
   }
-  
-  .box-img img{
-    width: 100%;
+
+  .icon-left-sb i, .icon-right-sb i{
+    padding-right: 0;
+    padding-bottom: 4px;
+  }
+
+  .icon-right-sb i{
+    padding-right: 8px;
+  }
+
+  .button-center-sb i{
+    padding: 0 11px;
+  }
+
+  .song-description{
+    margin-right: 25px;
   }
 }
 /* //SMALL VERSION 767px - 576px */
 
+/* EXTRA-SMALL VERSION 767px - 576px */
+@media screen and (max-width: 575px){
+  nav{
+    width: 50px;
+    padding: 11px;
+  }
+
+  #logo-small{
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .install-app i{
+    padding-left: 5px;
+  }
+
+  main{
+    width: calc(100% - 50px);
+  }
+
+  .top-overlay{
+    width: calc(100% - 50px);
+  }
+
+  #logo, .nav-list ul li a, .playlist-list, .install-app span, .icon-nav.green, .user span{
+    display: none;
+  }
+
+  .install-app{
+    border-bottom: none;
+  }
+
+  .icon-nav.home{
+    margin-left: 0;
+  }
+
+  .main-list ul{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-list ul li{
+    font-size: 15px;
+  }
+
+  .row{
+    padding-bottom: 15px;
+  }
+  
+  .box{
+    width: 46%;
+  }
+}
+/* //EXTRA-SMALL VERSION 767px - 576px */
 /* //MEDIA QUERY */
 
 
