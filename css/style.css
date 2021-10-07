@@ -305,6 +305,7 @@ svg{
 }
 
 .box-img img{
+  display: block;
   width: 100%;
 }
 
